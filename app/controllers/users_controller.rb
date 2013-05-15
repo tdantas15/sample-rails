@@ -13,6 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(name: userForm[:name], email: userForm[:email], 
                     password: userForm[:password], password_confirmation: userForm[:password_confirmation])    # Not the final implementation!
     if @user.save
+      sign_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else

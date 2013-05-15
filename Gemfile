@@ -12,6 +12,8 @@ group :development, :test do
 end
 
 group :test do
+  gem 'cucumber-rails', '1.3.0', :require => false
+  gem 'database_cleaner', '~> 1.0.0.RC1'
   gem 'selenium-webdriver', '2.0'
   gem 'capybara', '2.1.0.beta1'
   gem 'libnotify', '0.8.0'
